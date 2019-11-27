@@ -415,8 +415,8 @@ getOutput context mainExpr proof = do
     putStr $ intercalate ", "  (map show context)
     putStr " |- " 
     putStrLn $ show mainExpr
-    --putStrLn $ intercalate "\n" (map (\(a,b) -> (show b)) proof)
-    putStrLn $ intercalate "\n" (map (\b -> (show b)) proof)
+    putStrLn $ intercalate "\n" (map (\(a,b) -> (show b)) proof)
+    --putStrLn $ intercalate "\n" (map (\b -> (show b)) proof)
 
 debugOut smth = do
     putStrLn $ show smth
@@ -454,6 +454,7 @@ main = do
             then getOutput contextR mainExprR readyProof
             else putStrLn ":("
 
+{--
 mainDeduct = do
         (expr, revContext, proof) <- getFileInput
         let mpContext = makeMpContext 1 revContext Map.empty
@@ -462,4 +463,5 @@ mainDeduct = do
         if (ok && okDed)
             then getOutput (reverse (tail revContext)) dedExpr dedProof
             else putStrLn ":("
+--}
 
