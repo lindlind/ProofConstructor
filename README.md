@@ -8,7 +8,7 @@
 
 ### How to use
 
-Program checks given proposition. If it is always true, program shows the proof of this proposition. Otherwise program tries to set variables to *True* or to *False* and if the proposition becomes true, shows it's proof. Otherwise it shows :(
+Program checks given proposition. If it is always true, program shows the proof of this proposition. Otherwise program tries to set variables to *True* or to *False* and if the proposition becomes always true, shows it's proof. Otherwise program tries to set variables to *True* or to *False* and if the proposition becomes always false, shows proof of negate of proposition. Otherwise it shows :(
 
 1. Call `main` function
 2. Input the proposition
